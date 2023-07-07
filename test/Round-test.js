@@ -2,8 +2,8 @@ const chai = require('chai');
 const expect = chai.expect;
 const data = require('../src/data');
 
-const { createCard, evaluateGuess } = require('../src/card');
-const { createDeck, countCards } = require('../src/deck');
+const { createCard } = require('../src/card');
+const { createDeck } = require('../src/deck');
 const { createRound, takeTurn } = require('../src/round');
 
 
@@ -73,4 +73,3 @@ describe('takeTurn', function() {
       expect(round.incorrectGuesses).to.deep.equal([2])
     })
   })
-  

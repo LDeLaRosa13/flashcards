@@ -13,15 +13,17 @@ function createRound(deck) {
 
 
 function takeTurn(guess, round) {
-  round.currentCard = round.deck[round.turns]
   const isGuessCorrect = evaluateGuess(guess, round.currentCard.correctAnswer)
   
   if (isGuessCorrect === 'Incorrect!') {
     round.incorrectGuesses.push(round.currentCard.id)
   }
+  
   round.turns++
+  round.currentCard = round.deck[round.turns]
   return isGuessCorrect
 }
+
 
 
 function calculatePercentCorrect(round) {

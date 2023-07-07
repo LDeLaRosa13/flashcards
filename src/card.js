@@ -19,7 +19,7 @@ function createCard(id, question, answers, correctAnswer) {
 
 
 
-// export {createCard}
+
 
 module.exports = {
   createCard,
